@@ -4,13 +4,13 @@
     :class="task.state"
   >
     <label class="checkbox inline px-2">
-      <input type="checkbox" :checked="isChecked" name="archived" />
+      <input type="checkbox" :checked="isArchived" name="archived" />
     </label>
     <div class="title inline px-2">
       {{ task.title }}
     </div>
     <label class="checkbox inline px-2">
-      <input type="checkbox" :checked="isChecked" name="pinned" />
+      <input type="checkbox" :checked="isPinned" name="pinned" />
     </label>
   </div>
 </template>
@@ -27,8 +27,11 @@ export default {
     },
   },
   computed: {
-    isChecked() {
+    isArchived() {
       return this.task.state === 'TASK_ARCHIVED'
+    },
+    isPinned() {
+      return this.task.state === 'TASK_PINNED'
     },
   },
 }
