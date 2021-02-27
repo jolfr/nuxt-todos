@@ -50,4 +50,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Storybook Configuration: https://storybook.nuxtjs.org/
+  storybook: {
+    stories: ['~/components/**/*.stories.js'],
+    webpackFinal(config) {
+      return config
+    },
+    addons: ['@storybook/addon-controls', '@storybook/addon-actions'],
+  },
 }

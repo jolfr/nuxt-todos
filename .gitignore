@@ -77,6 +77,10 @@ dist
 # Serverless directories
 .serverless
 
+# Storybook files
+.nuxt-storybook
+storybook-static
+
 # IDE / Editor
 .idea
 
